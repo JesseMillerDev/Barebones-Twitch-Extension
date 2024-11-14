@@ -1,0 +1,192 @@
+.config-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.config-panel {
+    background: #1f1f23;
+    border-radius: 8px;
+    padding: 24px;
+    color: #efeff1;
+}
+
+.config-header {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.config-header h1 {
+    margin: 0;
+    color: #9147ff;
+    font-size: 24px;
+}
+
+.config-section {
+    background: #18181b;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.config-section h2 {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    color: #9147ff;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.toggle-setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: #1f1f23;
+    border-radius: 4px;
+}
+
+.toggle-wrapper {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-wrapper input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #303032;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #9147ff;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+.rewards-config {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reward-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #1f1f23;
+    border-radius: 4px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reward-item input {
+    width: 100px;
+    padding: 8px;
+    background: #18181b;
+    border: 1px solid #303032;
+    border-radius: 4px;
+    color: #efeff1;
+}
+
+.input-suffix {
+    color: #adadb8;
+}
+
+.config-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.primary-button {
+    background: #9147ff;
+    border: none;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #772ce8;
+}
+
+.secondary-button {
+    background: transparent;
+    border: 1px solid #9147ff;
+    color: #9147ff;
+}
+
+.secondary-button:hover {
+    background: rgba(145, 71, 255, 0.1);
+}
+
+.notification {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.notification.success {
+    background: #1f9b4e;
+    color: white;
+}
+
+.notification.error {
+    background: #eb0400;
+    color: white;
+}
+
+.notification.info {
+    background: #3a3a3d;
+    color: white;
+}

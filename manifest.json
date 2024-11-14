@@ -1,0 +1,24 @@
+{
+  "manifest_version": 1,
+  "type": "panel",
+  "sdk_version": 2,
+  "version": "0.0.1",
+  "name": "Channel Experience Manager",
+  "description": "Manage viewer experience with tiered features and channel points integration",
+  "author": "Your Name",
+  "panel_height": 500,
+  "panel_width": 400,
+  "id": "your_extension_id",
+  "views": {
+    "panel": {
+      "viewerUrl": "index.html",
+      "height": 500,
+      "width": 400
+    },
+    "config": {
+      "viewerUrl": "config.html",
+      "height": 500,
+      "width": 600
+    }
+  }
+}

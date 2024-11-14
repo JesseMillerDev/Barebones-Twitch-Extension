@@ -1,0 +1,248 @@
+.privacy-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.privacy-modal-content {
+    background: #1f1f23;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    color: #efeff1;
+    position: relative;
+}
+
+.privacy-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #303032;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #1f1f23;
+    z-index: 1;
+}
+
+.privacy-modal-header h2 {
+    margin: 0;
+    color: #9147ff;
+    font-size: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: #efeff1;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.privacy-modal-body {
+    padding: 20px;
+}
+
+.privacy-section {
+    margin-bottom: 24px;
+}
+
+.privacy-section h3 {
+    color: #bf94ff;
+    margin: 0 0 16px 0;
+    font-size: 18px;
+}
+
+.tier-info {
+    background: #18181b;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.tier-info h4 {
+    margin: 0 0 12px 0;
+    color: #efeff1;
+}
+
+.tier-info ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #adadb8;
+}
+
+.tier-info li {
+    margin-bottom: 8px;
+}
+
+.tier-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 12px;
+    background: #1f9b4e;
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.opt-in-button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #9147ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.opt-in-button:hover {
+    background: #772ce8;
+}
+
+.opt-in-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.opt-in-button.success {
+    background: #1f9b4e;
+}
+
+.privacy-controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.privacy-controls button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.secondary-button {
+    background: transparent;
+    border: 1px solid #9147ff;
+    color: #9147ff;
+}
+
+.secondary-button:hover {
+    background: rgba(145, 71, 255, 0.1);
+}
+
+.danger-button {
+    background: transparent;
+    border: 1px solid #eb0400;
+    color: #eb0400;
+}
+
+.danger-button:hover {
+    background: rgba(235, 4, 0, 0.1);
+}
+
+.protection-info {
+    background: #18181b;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.protection-info p {
+    margin: 0 0 12px 0;
+    color: #efeff1;
+}
+
+.protection-info ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #adadb8;
+}
+
+.privacy-notification {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border-radius: 4px;
+    animation: slideUp 0.3s ease-out;
+}
+
+.privacy-notification.info {
+    background: #3a3a3d;
+}
+
+.privacy-notification.success {
+    background: #1f9b4e;
+}
+
+.privacy-notification.warning {
+    background: #bf914b;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar styling */
+.privacy-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.privacy-modal-content::-webkit-scrollbar-track {
+    background: #18181b;
+}
+
+.privacy-modal-content::-webkit-scrollbar-thumb {
+    background: #303032;
+    border-radius: 4px;
+}
+
+.privacy-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #404044;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .privacy-modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .privacy-controls {
+        flex-direction: column;
+    }
+}
